@@ -8,9 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    // MARK: Stored properties
+    
+    // Keeps track of what the user searches for
+    @State private var searchText = ""
+    
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            
+            SearchBarView(text: $searchText)
+            
+            // Push the search bar to the top
+            Spacer()
+        }
     }
 }
 
